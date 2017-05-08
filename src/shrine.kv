@@ -1,0 +1,49 @@
+#:kivy 1.0.9
+
+<RelationshipMask>:
+	canvas.before:
+		Color:
+			id: mask_color
+			rgba: 1, 1, 1, self.mask_alpha
+		Rectangle:
+			id: bg_rect
+			pos: self.pos
+			size: self.size
+
+<Background>:
+	canvas.before:
+		Color:
+			rgba: 1, 1, 1, 1
+		Rectangle:
+			id: bg_rect
+			pos: self.pos
+			size: self.size
+			source: '../images/backdrop_finalmonitorsize.png'
+
+<ResponseButton>:
+	id: 'option2'
+    background_color: 0, 0, 1, 0
+    size_hint: (self.xsize, self.ysize)
+    index: 0
+
+<Button>:
+	id: 'option2'
+    background_color: 0, 0, 1, 0
+    size_hint: (0.2, 0.1)
+    index: 0
+
+<StoryLabel>:
+	center_x: 0.2
+	centry_y: 0.2
+	font_size: 20
+	color: 1,1,1,0
+	index: 0
+	font_name: '../fonts/Josefin_Slab/JosefinSlab-Thin.ttf'
+	
+<Label>:
+	center_x: 0.2
+	centry_y: 0.2
+	font_size: 20
+	color: 1,1,1,0
+	index: 0
+	font_name: '../fonts/Josefin_Slab/JosefinSlab-Italic.ttf'
